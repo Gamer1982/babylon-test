@@ -11,6 +11,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@babylonjs/core": "^5.49.0",
     "pinia": "^2.0.32",
     "vue": "^3.2.47"
   },
