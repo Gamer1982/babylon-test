@@ -8,6 +8,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { BasicScene } from "@/BabylonExamples/BasicScene"
+import { StandardMaterials } from "@/BabylonExamples/StandardMaterials"
+import { PBR } from "@/BabylonExamples/PBR"
 
 defineProps<{
   msg: string
@@ -17,7 +19,7 @@ const canvas = ref();
 
 onMounted(() => {
   canvas.value = document.querySelector("canvas")!;
-  new BasicScene(canvas.value)
+  new PBR(canvas.value)
 })
 
 
@@ -29,8 +31,13 @@ onMounted(() => {
 
 
 <style scoped>
+.babylon {
+  width: 100%;
+  height: 100%;
+}
+
 .canvas {
-  width: 1280px;
-  height: 720px;
+  width: 100%;
+  height: 90%;
 }
 </style>
