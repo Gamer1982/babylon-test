@@ -10,6 +10,7 @@ import { ref, onMounted } from 'vue'
 import { BasicScene } from "@/BabylonExamples/BasicScene"
 import { StandardMaterials } from "@/BabylonExamples/StandardMaterials"
 import { PBR } from "@/BabylonExamples/PBR"
+import { CustomModel } from "@/BabylonExamples/CustomModel"
 
 defineProps<{
   msg: string
@@ -19,7 +20,7 @@ const canvas = ref();
 
 onMounted(() => {
   canvas.value = document.querySelector("canvas")!;
-  new PBR(canvas.value)
+  new CustomModel(canvas.value)
 })
 
 
